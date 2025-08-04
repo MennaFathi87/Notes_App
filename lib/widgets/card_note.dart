@@ -1,41 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notesapp/models/note_model.dart';
 
 class CardNote extends StatelessWidget {
-  const CardNote({super.key});
+  final NoteModel note;
+
+  const CardNote({super.key, required this.note});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: 24, top: 24),
+      padding: const EdgeInsets.only(bottom: 24, top: 24),
       decoration: BoxDecoration(
-          color: Colors.orangeAccent, borderRadius: BorderRadius.circular(14)),
+        color: Color(note.color),
+        borderRadius: BorderRadius.circular(14),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
             title: Text(
-              "Flutter tips",
-              style: TextStyle(color: Colors.black, fontSize: 25),
+              note.title,
+              style: const TextStyle(color: Colors.black, fontSize: 25),
             ),
             subtitle: Text(
-              "build you carerr with Tharwat Smay",
+              note.subTitle,
               style:
                   TextStyle(fontSize: 15, color: Colors.black.withOpacity(.5)),
             ),
             trailing: IconButton(
               onPressed: () {},
-              //fontAwesom
-              icon: Icon(
+              icon: const Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
               ),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.only(right: 16),
             child: Text(
-              "july 2024/2025",
+              note.date,
               style: TextStyle(color: Colors.black.withOpacity(.5)),
             ),
           ),
