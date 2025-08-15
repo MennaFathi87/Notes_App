@@ -9,11 +9,11 @@ import 'package:notesapp/veiws/notes_veiw.dart';
 
 void main() async {
   await Hive.initFlutter();
-   //
+
   Hive.registerAdapter(NoteModelAdapter());
-  ///
+
   Bloc.observer = SimpleBlocObserver();
-  //
+
   await Hive.openBox<NoteModel>(kNotesBox);
 
   runApp(const NotesApp());
