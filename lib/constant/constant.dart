@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+const kTextColor = Color(0xFFFFFFFF);
+const kShowSnacbarColor = Color(0xFFF83B2E);
 const kPrimaryColor = Color(0xff62FCD7);
 const kNotesBox = 'notes_box';
 List<Color> kColors = const [
