@@ -1,16 +1,26 @@
-# notesapp
+# 📝 Notes App
 
-A new Flutter project.
+A simple and beautiful Flutter app for creating and managing notes. The app uses local storage (Hive), state management with Cubit, and clean UI with centralized colors and reusable components.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- Add new notes
+- Edit existing notes
+- Persistent local storage using Hive
+- State management using Cubit
+- Show feedback using SnackBars and Dialogs
+- Centralized color constants file
+- Clean and responsive UI
+## 🧠 State Management
 
-A few resources to get you started if this is your first Flutter project:
+The app uses **Cubit** (from `flutter_bloc`) to manage state for:
+- Adding notes
+- Editing notes
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Each feature has its own Cubit to keep logic separated and clean.
+## 💾 Local Storage
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app uses [Hive](https://pub.dev/packages/hive) for local, and fast data storage.  
+Notes are saved on the device and persist even after closing the app.
+
+
