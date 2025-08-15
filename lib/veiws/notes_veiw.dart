@@ -20,6 +20,7 @@ class NotesView extends StatelessWidget {
               builder: (context) {
                 return const AddNoteBottomSheet();
               });
+              
         },
         child: const Icon(Icons.add),
       ),
@@ -27,3 +28,32 @@ class NotesView extends StatelessWidget {
     );
   }
 }
+
+
+/*import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notesapp/cubits/theme_cubit.dart';
+
+class NotesView extends StatelessWidget {
+  const NotesView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Notes'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.brightness_6),
+            onPressed: () {
+              context.read<ThemeCubit>().toggleTheme();
+            },
+          ),
+        ],
+      ),
+      body: const Center(
+        child: Text('Your Notes will appear here'),
+      ),
+    );
+  }
+} */

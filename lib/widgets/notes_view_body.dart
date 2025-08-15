@@ -14,6 +14,7 @@ class NotesViewBody extends StatefulWidget {
 
 class _NotesViewBodyState extends State<NotesViewBody> {
   @override
+  //init state
   void initState() {
     BlocProvider.of<NotesCubit>(context).fetchAllNotes();
     super.initState();
@@ -32,6 +33,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
             title: 'Notes',
             icon: Icons.search,
           ),
+          //expanded 
           Expanded(
             child: NotesListView(),
           ),

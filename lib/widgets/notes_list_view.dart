@@ -28,7 +28,7 @@ class NotesListView extends StatelessWidget {
                     note: notes[index],
                   ),
                 );
-              }),
+              },),
         );
       },
     );

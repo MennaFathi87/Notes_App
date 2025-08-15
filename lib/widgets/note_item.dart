@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notesapp/constant/constant.dart';
 import 'package:notesapp/cubits/notes_cubite/notes_cubite.dart';
+import 'package:notesapp/helper/show_snack_bar.dart';
 import 'package:notesapp/models/note_model.dart';
 import 'package:notesapp/veiws/edit_notes_views.dart';
 
@@ -34,7 +36,7 @@ class NoteItem extends StatelessWidget {
               title: Text(
                 note.title,
                 style: const TextStyle(
-                  fontSize: 26,
+                  fontSize: 20,
                   color: Colors.black,
                 ),
               ),
@@ -50,16 +52,12 @@ class NoteItem extends StatelessWidget {
               ),
               trailing: IconButton(
                 onPressed: () {
+                  //delte the item
                   note.delete();
+                  //
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
 
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Note deleted successfully!'),
-                      duration: Duration(seconds: 2),
-                      backgroundColor: Colors.redAccent,
-                    ),
-                  );
+                  ShowSnackBar(context);
                 },
                 icon: const Icon(
                   Icons.delete,

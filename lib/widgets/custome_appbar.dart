@@ -1,8 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:notesapp/widgets/custome_icon.dart';
-
-
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar(
